@@ -1,17 +1,16 @@
-package kg.megacom.requestforstudents.models;
+package kg.megacom.requestforstudents.models.dto;
 
+import kg.megacom.requestforstudents.models.OrderStatus;
+import kg.megacom.requestforstudents.models.Subscribers;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "Orders")
 @Data
-public class Orders {
+public class OrdersDto {
 
-    @Id
-    @GeneratedValue
+
     private Long id;
 
     private String schoolName;
@@ -21,9 +20,7 @@ public class Orders {
     private Date naviDate;
     private String comment;
 
-    @ManyToOne
-    @JoinColumn( name = "id_subscriber")
-    private Subscribers idSubscriber;
+    private SubscribersDto idSubscriber;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;

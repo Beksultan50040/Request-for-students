@@ -3,7 +3,7 @@ package kg.megacom.requestforstudents.models;
 public enum OrderStatus {
 
     NEW,
-    PROCESSED,
+    IN_PROCESS,
     DENIED,
     CANCELED,
     APPROVED

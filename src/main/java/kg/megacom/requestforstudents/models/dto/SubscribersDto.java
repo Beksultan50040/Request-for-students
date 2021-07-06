@@ -1,4 +1,4 @@
-package kg.megacom.requestforstudents.models;
+package kg.megacom.requestforstudents.models.dto;
 
 import lombok.Data;
 
@@ -8,13 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Entity
-@Table(name = "Subscribers")
-@Data
-public class Subscribers {
 
-    @Id
-    @GeneratedValue
+@Data
+public class SubscribersDto {
+
     private Long id;
 
     private String name;
