@@ -5,6 +5,7 @@ import kg.megacom.requestforstudents.models.OrderStatus;
 import kg.megacom.requestforstudents.models.Orders;
 import kg.megacom.requestforstudents.models.Response;
 import kg.megacom.requestforstudents.models.dto.MainDto;
+import kg.megacom.requestforstudents.models.dto.OrdersDto;
 import kg.megacom.requestforstudents.service.OrderService;
 import kg.megacom.requestforstudents.service.SubscriberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/order")
-public class MainController {
+public class    MainController {
 
     @Autowired
     private OrderService orderService;
@@ -27,7 +28,7 @@ public class MainController {
     }
 
     @GetMapping("/get")
-    public List<Orders> getAllOrders(){
+    public List<OrdersDto> getAllOrders(){
         return orderService.getAllOrders();
     }
 

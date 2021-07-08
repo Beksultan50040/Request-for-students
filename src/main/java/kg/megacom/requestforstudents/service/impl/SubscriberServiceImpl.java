@@ -18,6 +18,7 @@ public class SubscriberServiceImpl implements SubscriberService {
     private SubscriberRepo subscriberRepo;
 
 
+    // Check if the user exists or not by number
     @Override
     public SubscribersDto findSubsByNumber(String number) {
         Subscribers subscribers = subscriberRepo.findByNumber(number);
